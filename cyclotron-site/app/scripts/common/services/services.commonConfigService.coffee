@@ -1,5 +1,5 @@
 ###
-# Copyright (c) 2013-2015 the original author or authors.
+# Copyright (c) 2013-2017 the original author or authors.
 #
 # Licensed under the MIT License (the "License");
 # you may not use this file except in compliance with the License. 
@@ -97,30 +97,37 @@ cyclotronServices.factory 'commonConfigService', ->
                             label: 'Charcoal'
                             value: 'charcoal'
                             dashboardBackgroundColor: '#1E2328'
+                            aceTheme: 'solarized_dark'
                         dark:
                             label: 'Dark'
                             value: 'dark'
                             dashboardBackgroundColor: '#2f2f2f'
+                            aceTheme: 'tomorrow_night'
                         darkmetro:
                             label: 'Dark Metro'
                             value: 'darkmetro'
                             dashboardBackgroundColor: '#2f2f2f'
+                            aceTheme: 'tomorrow_night'
                         gto:
                             label: 'GTO'
                             value: 'gto'
                             dashboardBackgroundColor: 'white'
+                            aceTheme: 'chrome'
                         light:
                             label: 'Light'
                             value: 'light'
                             dashboardBackgroundColor: 'white'
+                            aceTheme: 'chrome'
                         lightborderless:
                             label: 'Light (borderless)'
                             value: 'lightborderless'
                             dashboardBackgroundColor: 'white'
+                            aceTheme: 'chrome'
                         dark2:
                             label: 'Very Dark'
                             value: 'dark2'
                             dashboardBackgroundColor: 'black'
+                            aceTheme: 'monokai'
                     order: 5
                 
                 themeVariant:
@@ -3448,6 +3455,20 @@ cyclotronServices.factory 'commonConfigService', ->
                         required: false                        
                         order: 14
 
+            json:
+                name: 'jsonWidget',
+                label: 'JSON',
+                icon: 'fa-cog',
+                properties:
+                    dataSource:
+                        label: 'Data Source'
+                        description: 'The name of the Data Source providing data for this Widget.'
+                        placeholder: 'Data Source Name'
+                        type: 'string'
+                        required: false
+                        options: datasourceOptions
+                        order: 10
+            
             linkedWidget:
                 name: 'linkedWidget'
                 label: 'Linked Widget'

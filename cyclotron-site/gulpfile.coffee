@@ -207,6 +207,7 @@ gulp.task 'scripts', ->
         './app/scripts/common/mixins.coffee'
         './app/scripts/common/app.coffee'
         './app/scripts/common/**/*.coffee'
+        './app/scripts/common/**/*.js'
     ], 'app.common.js', true)
 
     slurp(['./app/scripts/dashboards/**/*.coffee'], 'app.dashboards.js', true)
